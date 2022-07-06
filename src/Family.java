@@ -9,7 +9,8 @@ public class Family {
         this.gender = gender;
     }
 
-    // реализация метода hashCode
+    // Реализация метода hashCode. Если кратко, то "глубинные" реализации метода
+    // были подняты на поверхность и немного изменены
     @Override
     public int hashCode() {
         int result = 1;
@@ -19,6 +20,8 @@ public class Family {
         return result;
     }
 
+    // учитывая, что у меня в параметрах класса переменные и объект, я разделил метод equals
+    // на два метода (для примитивов и объектов) и в main делал соответствующее сравнение
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
